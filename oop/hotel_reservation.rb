@@ -32,3 +32,28 @@ end
 # The add_a_crib method
 # The add_a_custom_amenity method
 
+room_237 = HotelReservation.new(customer_name: 'Jack Torrence', date: 'winter', room_number: 237)
+
+puts room_237.room_number
+
+result = room_237.room_number = 217
+
+if result == room_237.room_number
+  puts 'Pass!'
+else
+  puts 'Fail.'
+end
+
+room_237.add_a_fridge
+
+room_237.add_a_crib
+
+room_237.add_a_custom_amenity('axe')
+
+result = room_237.amenities
+
+if result == ['fridge', 'crib', 'axe']
+  puts 'Pass!'
+else
+  puts 'Fail.'
+end

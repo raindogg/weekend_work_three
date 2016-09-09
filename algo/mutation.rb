@@ -3,10 +3,22 @@
 # the first string, and false otherwise.
 
 def mutation?(base_word, mutation)
-
+  base_letters = base_word.split('')
+  mutation_letters = mutation.split('')
+  matching = []
+  mutation_letters.each do |letter|
+    unless base_letters.index(letter).nil?
+      matching << letter
+    end
+  end
+  if matching.join == mutation
+    true
+  else
+    false
+  end
 end
 
-# Driver code - don't touch anything below this line.
+# # Driver code - don't touch anything below this line.
 puts "TESTING mutation?..."
 puts
 
